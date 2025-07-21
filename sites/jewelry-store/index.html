@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevate Diamond - Exquisite Jewelry</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light background similar to the image */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .product-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .btn-primary {
+            background-color: #d4af37; /* Gold-like color for primary actions */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: #c0a02f;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-gray-800">Elevate Diamond</a>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Home</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Shop</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">About Us</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+            </nav>
+
+            <!-- Icons -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fas fa-search"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fas fa-user"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fas fa-heart"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-600 hover:text-gray-900">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-gray-100 to-gray-200 py-16 md:py-24 rounded-lg mx-4 mt-8 shadow-lg">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
+                    Sparkle with Our <br> <span class="text-yellow-700">Diamond Collection</span>
+                </h1>
+                <p class="mt-4 text-lg text-gray-600">
+                    Discover exquisite diamond jewelry crafted to perfection.
+                </p>
+                <button class="mt-8 btn-primary">Shop Now</button>
+            </div>
+            <div class="md:w-1/4 flex justify-center" style="height: 500px;">
+                <!-- Video for hero section -->
+                <video class="rounded-lg shadow-xl w-full h-full object-cover" autoplay loop muted playsinline>
+                    <source src="jews.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Categories Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12">Popular Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <!-- Category Card 1 -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md product-card h-48"> <!-- Added h-48 for consistent card height -->
+                    <img src="https://i.pinimg.com/1200x/2e/2e/95/2e2e95ef5492d75979f5c6f74945d937.jpg" alt="Diamond Rings" class="rounded-full mb-4 w-24 h-24 object-cover"> <!-- Ensured w-24 h-24 and object-cover -->
+                    <h3 class="text-lg font-semibold text-gray-800">Rings</h3>
+                    <p class="text-gray-500 text-sm">120 Products</p>
+                </div>
+                <!-- Category Card 2 -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md product-card h-48"> <!-- Added h-48 for consistent card height -->
+                    <img src="https://i.pinimg.com/1200x/7c/2c/c2/7c2cc2d46f49b1b536c69b7b42c69539.jpg" alt="Gold Necklaces" class="rounded-full mb-4 w-24 h-24 object-cover"> <!-- Ensured w-24 h-24 and object-cover -->
+                    <h3 class="text-lg font-semibold text-gray-800">Necklaces</h3>
+                    <p class="text-gray-500 text-sm">85 Products</p>
+                </div>
+                <!-- Category Card 3 -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md product-card h-48"> <!-- Added h-48 for consistent card height -->
+                    <img src="https://i.pinimg.com/1200x/a0/13/3e/a0133eb6ed39be8672a579a30d41fd55.jpg" alt="Pearl Earrings" class="rounded-full mb-4 w-24 h-24 object-cover"> <!-- Ensured w-24 h-24 and object-cover -->
+                    <h3 class="text-lg font-semibold text-gray-800">Earrings</h3>
+                    <p class="text-gray-500 text-sm">150 Products</p>
+                </div>
+                <!-- Category Card 4 -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md product-card h-48"> <!-- Added h-48 for consistent card height -->
+                    <img src="https://i.pinimg.com/1200x/c4/89/d7/c489d729184062786c67e1c4969e9852.jpg" alt="Silver Bracelets" class="rounded-full mb-4 w-24 h-24 object-cover"> <!-- Ensured w-24 h-24 and object-cover -->
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelets</h3>
+                    <p class="text-gray-500 text-sm">70 Products</p>
+                </div>
+                <!-- Category Card 5 -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md product-card h-48"> <!-- Added h-48 for consistent card height -->
+                    <img src="https://i.pinimg.com/1200x/33/59/c0/3359c006cd6898a7e63242faee325e41.jpg" alt="Gemstone Pendants" class="rounded-full mb-4 w-24 h-24 object-cover"> <!-- Ensured w-24 h-24 and object-cover -->
+                    <h3 class="text-lg font-semibold text-gray-800">Pendants</h3>
+                    <p class="text-gray-500 text-sm">95 Products</p>
+                </div>
+                <!-- Category Card 6 -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md product-card h-48"> <!-- Added h-48 for consistent card height -->
+                    <img src="https://i.pinimg.com/1200x/24/da/ff/24daff578c013763ed4c31e63c2fc65b.jpg" alt="Jewelry Sets" class="rounded-full mb-4 w-24 h-24 object-cover"> <!-- Ensured w-24 h-24 and object-cover -->
+                    <h3 class="text-lg font-semibold text-gray-800">Jewelry Sets</h3>
+                    <p class="text-gray-500 text-sm">40 Products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section (similar to "Flutter & Butterfly Pendant" and "Best Gold Filled Bracelet") -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Featured Product 1 -->
+            <div class="bg-white rounded-lg shadow-md flex flex-col md:flex-row items-center p-6 product-card">
+                <div class="md:w-1/2 mb-4 md:mb-0 md:mr-6">
+                    <img src="https://i.pinimg.com/736x/7d/a9/2b/7da92bfc3765e4bec22a9b06fb142700.jpg" alt="Diamond Solitaire Pendant" class="rounded-lg w-full h-64 object-cover"> <!-- Added h-64 and object-cover -->
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Radiant Diamond Pendant</h3>
+                    <p class="text-gray-600 mb-4">A timeless piece, perfect for any occasion.</p>
+                    <button class="btn-primary text-sm">View Details</button>
+                </div>
+            </div>
+            <!-- Featured Product 2 -->
+            <div class="bg-white rounded-lg shadow-md flex flex-col md:flex-row items-center p-6 product-card">
+                <div class="md:w-1/2 mb-4 md:mb-0 md:mr-6">
+                    <img src="https://i.pinimg.com/1200x/8a/85/8f/8a858f0e64da3ac59bad67e92b126572.jpg" alt="Gold Chain Bracelet" class="rounded-lg w-full h-64 object-cover"> <!-- Added h-64 and object-cover -->
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Luxurious Gold Bracelet</h3>
+                    <p class="text-gray-600 mb-4">Elegance that shines on your wrist.</p>
+                    <button class="btn-primary text-sm">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12">Trending Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 product-card">
+                    <img src="https://i.pinimg.com/736x/77/09/65/770965c932368bf0359893e0e1c7b1d5.jpg" alt="Diamond Ring" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Classic Solitaire Ring</h3>
+                    <p class="text-gray-600 text-lg font-bold mb-2">OMR 462.00</p>
+                    <p class="text-gray-500 text-sm line-through">OMR 577.50</p>
+                    <button class="mt-4 btn-primary w-full text-sm">Add to Cart</button>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 product-card">
+                    <img src="https://i.pinimg.com/1200x/44/ba/6e/44ba6e88cc7cb4087634e1e5202b9917.jpg" alt="Pearl Earrings" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Elegant Pearl Earrings</h3>
+                    <p class="text-gray-600 text-lg font-bold mb-2">OMR 134.75</p>
+                    <button class="mt-4 btn-primary w-full text-sm">Add to Cart</button>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 product-card">
+                    <img src="https://i.pinimg.com/1200x/b4/aa/94/b4aa94e3a7496b4709938bd5e25377c0.jpg" alt="Sapphire Necklace" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Sapphire Drop Necklace</h3>
+                    <p class="text-gray-600 text-lg font-bold mb-2">OMR 346.12</p>
+                    <button class="mt-4 btn-primary w-full text-sm">Add to Cart</button>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-lg shadow-md p-6 product-card">
+                    <img src="https://i.pinimg.com/1200x/19/0a/de/190ade0f7d29f1faa6b0aa7c30a0f066.jpg" alt="Gold Hoops" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Minimalist Gold Hoops</h3>
+                    <p class="text-gray-600 text-lg font-bold mb-2">OMR 69.30</p>
+                    <button class="mt-4 btn-primary w-full text-sm">Add to Cart</button>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="bg-white rounded-lg shadow-md p-6 product-card">
+                    <img src="https://i.pinimg.com/1200x/78/a2/7c/78a27c35c904ffee196caaa1423ab3d3.jpg" alt="Silver Bangle" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Sterling Silver Bangle</h3>
+                    <p class="text-gray-600 text-lg font-bold mb-2">OMR 96.25</p>
+                    <button class="mt-4 btn-primary w-full text-sm">Add to Cart</button>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="bg-white rounded-lg shadow-md p-6 product-card">
+                    <img src="https://i.pinimg.com/1200x/ab/14/b4/ab14b4f97c7bbee00e1758f4187bda32.jpg" alt="Emerald Ring" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Emerald Cut Ring</h3>
+                    <p class="text-gray-600 text-lg font-bold mb-2">OMR 693.00</p>
+                    <button class="mt-4 btn-primary w-full text-sm">Add to Cart</button>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="bg-white rounded-lg shadow-md p-6 product-card">
+                    <img src="https://i.pinimg.com/1200x/88/fe/1d/88fe1d6ffdcc61d0086714339e83f3be.jpg" alt="Diamond Studs" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Diamond Stud Earrings</h3>
+                    <p class="text-gray-600 text-lg font-bold mb-2">OMR 288.75</p>
+                    <button class="mt-4 btn-primary w-full text-sm">Add to Cart</button>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="bg-white rounded-lg shadow-md p-6 product-card">
+                    <img src="https://i.pinimg.com/1200x/70/38/a8/7038a8e0e0d2f7ead542080a19dcd6d9.jpg" alt="Rose Gold Necklace" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Rose Gold Heart Necklace</h3>
+                    <p class="text-gray-600 text-lg font-bold mb-2">OMR 161.70</p>
+                    <button class="mt-4 btn-primary w-full text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section (similar to "Silver And Diamond Earrings") -->
+    <section class="bg-gradient-to-l from-gray-100 to-gray-200 py-16 md:py-24 rounded-lg mx-4 mb-8 shadow-lg">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row-reverse items-center justify-center">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0 md:pl-8">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
+                    Timeless Beauty: <br> <span class="text-yellow-700">Silver and Diamond Elegance</span>
+                </h2>
+                <p class="mt-4 text-lg text-gray-600">
+                    Explore our stunning collection of silver and diamond earrings.
+                </p>
+                <button class="mt-8 btn-primary">Discover More</button>
+            </div>
+            <div class="md:w-1/2 flex justify-center md:pr-8">
+                <!-- Updated placeholder image for CTA section -->
+                <img src="https://i.pinimg.com/1200x/54/a2/f0/54a2f055e4abfd7afb3f42ed0677545c.jpg" alt="Silver and Diamond Earrings" class="rounded-lg shadow-xl w-full h-64 object-cover"> <!-- Added w-full h-64 and object-cover -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <!-- About Us -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Elevate Diamond</h3>
+                <p class="text-gray-400">
+                    Your destination for exquisite diamond and fine jewelry. We believe in crafting moments that last forever.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Shop All</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">New Arrivals</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Sale</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                <p class="text-gray-400">Unit 10, Al Khuwair Towers, Muscat, Sultanate of Oman</p>
+                <p class="text-gray-400">Email: info@elevatediamond.om</p>
+                <p class="text-gray-400">Phone: +968 24XX XXXX</p>
+                <div class="flex justify-center md:justify-start space-x-4 mt-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500">
+            &copy; 2025 Elevate Diamond. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
