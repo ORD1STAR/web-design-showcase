@@ -1,0 +1,60 @@
+{
+    "1": {
+        "name": "Fenêtre coulissante",
+        "image": "assets/fenetre-coulissante.avif",
+        "availableColors": [
+            {
+                "name": "White",
+                "hex": "#ffffff"
+            }
+        ]
+    },
+    "2": {
+        "name": "Fenêtres PVC",
+        "image": "assets/fenetre-pvc.avif",
+        "availableColors": [
+            {
+                "name": "White",
+                "hex": "#ffffff"
+            },
+            {
+                "name": "Gray",
+                "hex": "#adadad"
+            }
+        ]
+    },
+    "3": {
+        "name": "Fenêtres PVC-alu",
+        "image": "assets/fenetre-pvc-alu.avif",
+        "availableColors": [
+            {
+                "name": "White",
+                "hex": "#ffffff"
+            }
+        ]
+    },
+    "4": {
+        "name": "Fenêtres de toit",
+        "image": "assets/fenetres-de-toit.avif",
+        "availableColors": [
+            {
+                "name": "White",
+                "hex": "#ffffff"
+            }
+        ]
+    },
+    "5": {
+        "name": "Baies vitrées",
+        "image": "assets/oscillo-coulissante-pvc.avif",
+        "availableColors": [
+            {
+                "name": "White",
+                "hex": "#ffffff"
+            },
+            {
+                "name": "Gray",
+                "hex": "#adadad"
+            }
+        ]
+    }
+}

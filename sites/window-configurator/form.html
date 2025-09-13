@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Customization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div
+      class="bg-white rounded-lg shadow-xl overflow-hidden md:flex w-full max-w-6xl mx-4"
+    >
+      <!-- Left Section: Form -->
+      <div class="md:w-1/2 p-8 md:p-12 space-y-8">
+        <h1 class="text-3xl font-bold text-gray-800">Window Purchase</h1>
+        <form id="product-form" class="space-y-6">
+          <!-- Full Name -->
+          <div>
+            <label
+              for="full-name"
+              class="block text-sm font-medium text-gray-700"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+            />
+          </div>
+
+          <!-- Phone Number -->
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+            />
+          </div>
+
+          <!-- Physical Address -->
+          <div>
+            <label for="address" class="block text-sm font-medium text-gray-700"
+              >Physical Address</label
+            >
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+            ></textarea>
+          </div>
+
+          <!-- Height and Length -->
+          <div class="flex space-x-4">
+            <div class="w-1/2">
+              <label
+                for="height"
+                class="block text-sm font-medium text-gray-700"
+                >Height (cm)</label
+              >
+              <input
+                type="number"
+                id="height"
+                name="height"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+              />
+            </div>
+            <div class="w-1/2">
+              <label
+                for="length"
+                class="block text-sm font-medium text-gray-700"
+                >Length (cm)</label
+              >
+              <input
+                type="number"
+                id="length"
+                name="length"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+              />
+            </div>
+          </div>
+
+          <!-- Quantity and Notes -->
+          <div class="flex space-x-4">
+            <div class="w-1/2">
+              <label
+                for="quantity"
+                class="block text-sm font-medium text-gray-700"
+                >Quantity</label
+              >
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+              />
+            </div>
+            <div class="w-1/2">
+              <label for="note" class="block text-sm font-medium text-gray-700"
+                >Note</label
+              >
+              <textarea
+                id="note"
+                name="note"
+                rows="1"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Model Selection -->
+          <div>
+            <label for="model" class="block text-sm font-medium text-gray-700"
+              >Model</label
+            >
+            <select
+              id="model"
+              name="model"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+            >
+              <option value="model-a">Model A</option>
+              <option value="model-b">Model B</option>
+              <option value="model-c">Model C</option>
+            </select>
+          </div>
+
+          <!-- Color Selection -->
+          <div>
+            <label for="color" class="block text-sm font-medium text-gray-700"
+              >Color</label
+            >
+            <div id="color-options" class="mt-2 flex items-center space-x-4">
+              <!-- Color options will be generated here by JavaScript -->
+            </div>
+          </div>
+        </form>
+
+        <div class="space-y-4">
+          <button
+            onclick="addToPanier()"
+            class="w-full bg-blue-600 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition duration-300 ease-in-out shadow-lg"
+          >
+            Add to Cart
+          </button>
+          <button
+            onclick="askForDevis()"
+            class="w-full bg-gray-500 text-white rounded-md px-4 py-2 hover:bg-gray-600 transition duration-300 ease-in-out shadow-lg"
+          >
+            Ask for Devis
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Section: Model Display -->
+      <div
+        class="md:w-1/2 bg-gray-200 flex items-center justify-center p-8 md:p-12"
+      >
+        <div id="model-display" class="text-center">
+          <div
+            id="model-img-container"
+            class="w-full h-auto p-4 bg-gray-300 rounded-md"
+          >
+            <!-- Placeholder for the selected model image -->
+            <p class="text-gray-500">Select a model to see a preview.</p>
+          </div>
+          <div id="model-info" class="mt-4 text-gray-700">
+            <!-- Placeholder for model information -->
+          </div>
+        </div>
+
+        <button
+          onclick="togglePanierModal()"
+          class="see-panier-btn absolute top-4 right-4 bg-blue-600 text-white rounded-full p-3 shadow-lg hover:bg-blue-700 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.185 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Panier Modal -->
+    <div id="panier-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn" onclick="togglePanierModal()">&times;</span>
+        <h2 class="text-2xl font-bold mb-4">Your Cart</h2>
+        <div id="panier-list" class="space-y-4 max-h-80 overflow-y-auto">
+          <!-- Cart items will be rendered here -->
+        </div>
+        <div id="empty-panier-message" class="text-center text-gray-500 mt-4">
+          Your cart is empty.
+        </div>
+      </div>
+    </div>
+
+    <!-- Hover Tooltip -->
+    <div id="hover-tooltip" class="tooltip hidden"></div>
+
+    <script src="form.js"></script>
+  </body>
+</html>
